@@ -58,6 +58,11 @@
     padding: 100px 20px;
   }
 
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
   .hero-title {
     font-size: 32px;
   }
