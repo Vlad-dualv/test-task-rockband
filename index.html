@@ -19,7 +19,7 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/test-task-rockband/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/test-task-rockband/assets/index-Dd0NjlPh.css">
+    <link rel="stylesheet" crossorigin href="/test-task-rockband/assets/index-Bgz6RHTa.css">
   </head>
   <body>
     <header class="header">
@@ -65,7 +65,84 @@
 </section>
 
       
-      
+      <section id="concerts" class="concerts">
+  <div class="concerts-container">
+    <h2 class="section-title">Найближчі концерти</h2>
+    <table class="concerts-table">
+      <thead>
+        <tr class="concerts-header">
+          <th>Місто / Заклад</th>
+          <th>К-ть місць</th>
+          <th>Дата і час</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="concert-row">
+          <td class="concert-location" data-label="Місто / Заклад">
+            Київ — Docker-G Pub
+          </td>
+          <td class="concert-price" data-label="К-ть місць">250</td>
+          <td data-label="Дата і час">25.10.2025, 19:00</td>
+          <td data-label="">
+            <button
+              class="buy-ticket"
+              onclick="buyTicket('Київ — Docker Pub', '25.10.2025, 19:00', 250)"
+            >
+              Замовити квиток
+            </button>
+          </td>
+        </tr>
+        <tr class="concert-row">
+          <td class="concert-location" data-label="Місто / Заклад">
+            Львів — !FESTrepublic
+          </td>
+          <td class="concert-price" data-label="К-ть місць">400</td>
+          <td data-label="Дата і час">01.11.2025, 20:00</td>
+          <td data-label="">
+            <button
+              class="buy-ticket"
+              onclick="buyTicket('Львів — JazzRepublic', '01.11.2025, 20:00', 400)"
+            >
+              Замовити квиток
+            </button>
+          </td>
+        </tr>
+        <tr class="concert-row">
+          <td class="concert-location" data-label="Місто / Заклад">
+            Одеса — Зелен театр
+          </td>
+          <td class="concert-price" data-label="К-ть місць">700</td>
+          <td data-label="Дата і час">08.11.2025, 18:30</td>
+          <td data-label="">
+            <button
+              class="buy-ticket"
+              onclick="buyTicket('Одеса — Зелен театр', '08.11.2025, 18:30', 700)"
+            >
+              Замовити квиток
+            </button>
+          </td>
+        </tr>
+        <tr class="concert-row">
+          <td class="concert-location" data-label="Місто / Заклад">
+            Харків — ArtZavod
+          </td>
+          <td class="concert-price" data-label="К-ть місць">600</td>
+          <td data-label="Дата і час">16.11.2025, 19:00</td>
+          <td data-label="">
+            <button
+              class="buy-ticket"
+              onclick="buyTicket('Харків — ArtZavodі', '16.11.2025, 19:00', 600)"
+            >
+              Замовити квиток
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
       
     </main>
 
