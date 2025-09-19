@@ -12,6 +12,7 @@
 
 .concerts .section-title {
   text-align: left;
+  font-size: 24px;
   margin-bottom: 0;
   background: #2c2c2c;
   padding: 10px;
@@ -108,6 +109,10 @@
   .concerts-header th,
   .concert-row td {
     padding: 10px;
+  }
+
+  .concert-available-tickets {
+    display: none;
   }
 
   .buy-ticket {

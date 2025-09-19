@@ -1,0 +1,52 @@
+.about-us-section {
+  padding: 50px 20px;
+  background: #111111;
+}
+
+.about-us-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-us-container h2 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.members {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid #787878;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.member-card img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.member-name {
+  padding: 10px;
+  background: #1a1a1a;
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-section {
+    padding: 40px 10px;
+  }
+  .members {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
