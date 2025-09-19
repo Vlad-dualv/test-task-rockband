@@ -75,6 +75,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .page-navigation {
+    padding: 10px 15px;
+  }
   .burger-menu {
     display: flex;
   }
