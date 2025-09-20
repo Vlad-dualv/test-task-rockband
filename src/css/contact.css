@@ -102,3 +102,41 @@
   color: #666666;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 40px 10px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .name-and-email {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .contact-info {
+    padding: 15px;
+    gap: 5px;
+  }
+
+  .contact-info h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
