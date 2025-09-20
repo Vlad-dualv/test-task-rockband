@@ -10,7 +10,6 @@
 }
 
 .about-us-container h2 {
-  font-size: 24px;
   margin-bottom: 40px;
 }
 
@@ -23,7 +22,6 @@
 .member-card {
   display: flex;
   flex-direction: column;
-
   border: 1px solid #787878;
   border-radius: 10px;
   overflow: hidden;
@@ -37,6 +35,7 @@
 
 .member-name {
   padding: 10px;
+  color: rgb(193, 193, 193);
   background: #1a1a1a;
 }
 
