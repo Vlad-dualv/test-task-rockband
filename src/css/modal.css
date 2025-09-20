@@ -1,0 +1,86 @@
+.mobile-menu-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.765);
+  backdrop-filter: blur(5px);
+}
+
+.mobile-menu-wrapper.is-open {
+  display: flex;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.mobile-menu-container {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  padding: 60px 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.modal-close {
+  color: #666666;
+  font-size: 42px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #ff4757;
+}
+
+.mobile-menu-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mobile-menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.mobile-menu-link {
+  display: block;
+
+  font-size: 24px;
+  font-weight: 500;
+
+  padding: 15px;
+  border-radius: 8px;
+  background: #2c2c2c;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-link:active {
+  color: #ff4757;
+  background: #333333;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
