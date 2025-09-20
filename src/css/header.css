@@ -74,7 +74,7 @@
   backdrop-filter: blur(5px);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .page-navigation {
     padding: 10px 15px;
   }

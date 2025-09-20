@@ -33,7 +33,7 @@
   border: 1px solid #787878;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .history-section {
     padding: 40px 10px;
     text-align: center;
