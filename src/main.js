@@ -6,8 +6,11 @@ const menuLinks = document.querySelectorAll('.mobile-menu-link');
 const contactForm = document.getElementById('contactForm');
 const submitBtn = document.querySelector('.submit-button');
 const buyTicketBtns = document.querySelectorAll('.buy-ticket');
+const yearOnFooter = document.querySelector('.website-year');
 
 const api = 'https://httpbin.org';
+
+yearOnFooter.textContent = new Date().getFullYear();
 
 initializeSoldOutButtons();
 
@@ -15,6 +18,8 @@ function toggleModal() {
   mobileMenu.classList.toggle('is-open');
   document.body.classList.toggle('modal-open');
 }
+
+// SoldOut handling
 
 function initializeSoldOutButtons() {
   const allRows = document.querySelectorAll('.concert-row');
