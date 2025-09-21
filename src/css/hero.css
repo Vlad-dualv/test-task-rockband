@@ -1,6 +1,6 @@
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../img/pexels-annamw-1047442\ \(1\).jpg');
+    url('/img/pexels-annamw-1047442\ \(1\).jpg');
   background-size: cover;
   background-position: center;
   padding: 150px 20px;
