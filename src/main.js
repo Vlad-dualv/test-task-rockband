@@ -4,6 +4,7 @@ const burgerButton = document.querySelector('.burger-menu');
 const closeButton = document.querySelector('.mobile-menu-close-btn');
 const menuLinks = document.querySelectorAll('.mobile-menu-link');
 const contactForm = document.getElementById('contactForm');
+const submitBtn = document.querySelector('.submit-button');
 
 function toggleModal() {
   mobileMenu.classList.toggle('is-open');
@@ -28,13 +29,11 @@ mobileMenu.addEventListener('click', e => {
 
 contactForm.addEventListener('submit', async e => {
   e.preventDefault();
-
+  const submitBtnOriginalText = submitBtn.innerHTML;
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = 'Відправляємо... <span class="loading"></span>';
   const formData = new FormData(contactForm);
-  const data = {
-    name: formData.get('name').trim(),
-    email: formData.get('email').trim(),
-    message: formData.get('message').trim(),
-  };
+  const data = Object.fromEntries(formData);
 
   const queryString = new URLSearchParams(data).toString();
   const apiUrl = `https://httpbin.org/get?${queryString}`;
@@ -55,5 +54,8 @@ contactForm.addEventListener('submit', async e => {
   } catch (error) {
     console.error('Error:', error);
     alert('Вибачте, сталася помилка при відправці форми. Спробуйте пізніше.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = submitBtnOriginalText;
   }
 });
