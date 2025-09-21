@@ -9,8 +9,7 @@ concerts, and book tickets.
 - 🎸 **Interactive Band Section** - Learn about band members and their roles
 - 🎫 **Concert Tickets** - View upcoming concerts and book tickets with GET
   request functionality
-- 📱 **Mobile-Friendly Design** - Fully responsive layout with a mobile-first
-  approach
+- 📱 **Mobile-Friendly Design** - Fully responsive layout
 - 🗺️ **Location Map** - Interactive Google Maps integration showing venue
   location
 - 📝 **Contact Form** - GET request form submission for inquiries and bookings
