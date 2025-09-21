@@ -9,16 +9,50 @@ const buyTicketBtns = document.querySelectorAll('.buy-ticket');
 
 const api = 'https://httpbin.org';
 
+initializeSoldOutButtons();
+
 function toggleModal() {
   mobileMenu.classList.toggle('is-open');
   document.body.classList.toggle('modal-open');
 }
+
+function initializeSoldOutButtons() {
+  const allRows = document.querySelectorAll('.concert-row');
+
+  allRows.forEach(row => {
+    const availableTicketsElement = row.querySelector(
+      '.concert-available-tickets'
+    );
+    const button = row.querySelector('.buy-ticket');
+
+    if (availableTicketsElement && button) {
+      const availableTickets = parseInt(
+        availableTicketsElement.textContent.trim()
+      );
+
+      if (availableTickets <= 0) {
+        button.textContent = 'Розпродано';
+        button.disabled = true;
+        button.classList.add('sold-out');
+        row.style.opacity = '0.6';
+        availableTicketsElement.textContent = 'Розпродано';
+        availableTicketsElement.style.color = '#ff4757';
+        availableTicketsElement.style.fontWeight = 'bold';
+      }
+    }
+  });
+}
+
+// Buy ticket handling
 
 async function buyTicket(e) {
   const button = e.target;
   const row = button.closest('.concert-row');
   const location = row.querySelector('.concert-location').textContent;
   const datetime = row.querySelector('.concert-date').textContent;
+  const availableTickets = row.querySelector(
+    '.concert-available-tickets'
+  ).textContent;
 
   button.disabled = true;
   button.textContent = 'Обробляємо...';
@@ -65,29 +99,10 @@ async function buyTicket(e) {
 📧 booking@grymgrim.com
 📞 +38 (099) 123-45-6`);
 
-    // Reset button state
     button.textContent = 'Купити квиток';
     button.disabled = false;
   }
 }
-
-// Event Listeners
-burgerButton.addEventListener('click', toggleModal);
-closeButton.addEventListener('click', toggleModal);
-
-menuLinks.forEach(link => {
-  link.addEventListener('click', toggleModal);
-});
-
-mobileMenu.addEventListener('click', e => {
-  if (e.target === mobileMenu) {
-    toggleModal();
-  }
-});
-
-buyTicketBtns.forEach(btn => {
-  btn.addEventListener('click', buyTicket);
-});
 
 // Form submission handling
 
@@ -122,4 +137,22 @@ contactForm.addEventListener('submit', async e => {
     submitBtn.disabled = false;
     submitBtn.innerHTML = originalText;
   }
+});
+
+// Event Listeners
+burgerButton.addEventListener('click', toggleModal);
+closeButton.addEventListener('click', toggleModal);
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', toggleModal);
+});
+
+mobileMenu.addEventListener('click', e => {
+  if (e.target === mobileMenu) {
+    toggleModal();
+  }
+});
+
+buyTicketBtns.forEach(btn => {
+  btn.addEventListener('click', buyTicket);
 });
