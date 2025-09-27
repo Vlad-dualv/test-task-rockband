@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/test-task-rockband/",
+    "build": "vite build --base=/Rockband-landing-page/",
     "preview": "vite preview"
   },
   "devDependencies": {
